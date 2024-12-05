@@ -6,7 +6,7 @@ s = 0
 for i in re.findall(r'mul\((\d{1,3}),(\d{1,3})\)', inputs):
     s+=(int(i[0])*int(i[1]))
 print(s)
-
+# part 2
 s = 0
 for m in re.findall(r"do\(\)(.*?)(?=don't\(\))", 'do()'+inputs+"don't()", re.DOTALL):
     for i in re.findall(r'mul\((\d+),(\d+)\)', m):
